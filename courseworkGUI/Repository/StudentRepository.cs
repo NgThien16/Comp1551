@@ -55,7 +55,25 @@ namespace courseworkGUI.Repository
         }
         public void Update(Student student)
         {
+            using (var conn = Database.GetConnection())
+            {
+                conn.Open();
+                string sql = @"UPDATE users 
+                       SET name=@n, phone=@p, email=@e, subjects=@sub 
+                       WHERE id=@id AND role='Student'";
 
+                using (var cmd = new MySqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@n", student.Name);
+                    cmd.Parameters.AddWithValue("@p", student.PhoneNumber);
+                    cmd.Parameters.AddWithValue("@e", student.Email);
+                    cmd.Parameters.AddWithValue("@sub", student.Subject);
+
+                    cmd.Parameters.AddWithValue("@id", student.ID);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
         }
         public void Delete(string name)
         {

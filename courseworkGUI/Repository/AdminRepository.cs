@@ -57,10 +57,32 @@ namespace courseworkGUI.Repository
             }
         }
 
-        
-        public void Update(Admin admin)
-        { 
 
+        public void Update(Admin admin)
+        {
+            using (var conn = Database.GetConnection())
+            {
+                conn.Open();
+                string sql = @"UPDATE users 
+                       SET name=@n, phone=@p, email=@e, salary=@sal, is_full_time=@full, working_hours=@wh 
+                       WHERE id=@id AND role='Admin'";
+
+                using (var cmd = new MySqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@n", admin.Name);
+                    cmd.Parameters.AddWithValue("@p", admin.PhoneNumber);
+                    cmd.Parameters.AddWithValue("@e", admin.Email);
+                    cmd.Parameters.AddWithValue("@sal", admin.Salary);
+
+                    // Tham số riêng
+                    cmd.Parameters.AddWithValue("@full", admin.IsFulltime);
+                    cmd.Parameters.AddWithValue("@wh", admin.WorkingHours);
+
+                    cmd.Parameters.AddWithValue("@id", admin.ID);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
         }
         public void Delete(string name)
         {

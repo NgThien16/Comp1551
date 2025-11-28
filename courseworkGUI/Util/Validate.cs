@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace courseworkGUI
 {
-    internal class Validate
+    internal class CheckValidate
     {
         public static bool CheckName(string name)
         {
@@ -27,7 +27,7 @@ namespace courseworkGUI
         }
         public static bool CheckSalary(string salary) 
         {
-            string regexSalary = @"^[0-9]+$";
+            string regexSalary = @"^[1-9]+$";
             return Regex.IsMatch(salary, regexSalary);
         }
     }

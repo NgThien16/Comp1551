@@ -13,24 +13,7 @@ namespace courseworkGUI.Service
     {
         private TeacherRepository _teacherRepository = new TeacherRepository();
         public void Add(Teacher teacher)
-        {
-            if (!Validate.CheckName(teacher.Name))
-            {
-                throw new ArgumentException("Invalid, check again");
-            }
-            if (!Validate.CheckEmail(teacher.Email))
-            {
-                throw new ArgumentException("Invalid, check again");
-            }
-            if (!Validate.CheckPhoneNumber(teacher.PhoneNumber))
-            {
-                throw new ArgumentException("Invalid, check again");
-            }
-            if (teacher.Salary<0)
-            {
-                throw new ArgumentException("Invalid, check again");
-            }
-
+        { 
             _teacherRepository.Add(teacher);
         }
         public List<Teacher> GetAll() {

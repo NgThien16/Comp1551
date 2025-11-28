@@ -28,37 +28,34 @@ namespace courseworkGUI
         TeacherService teacherService = new TeacherService();
         StudentService studentService = new StudentService();
         AdminService adminService = new AdminService();
+        PersonService personService = new PersonService();
         private void LoadData()
         {
             try
             {
-                // 1. Kiểm tra xem người dùng đang chọn hiển thị Role nào
+                // check user choose role
                 if (cbbRecord.SelectedItem == null) return;
 
                 string currentRole = cbbRecord.SelectedItem.ToString();
-
-                // 2. Reset dữ liệu cũ trên bảng đi
+                //Reset old data
                 dgvRecord.DataSource = null;
-                dgvRecord.Rows.Clear(); // Dòng này chỉ chạy nếu DataSource null, giúp bảng sạch sẽ
-
-                // 3. Phân loại để gọi Service tương ứng
+                dgvRecord.Rows.Clear(); // it run when datasourse = null
                 if (currentRole == "Teacher")
-                {
-                    
+                {  
                     dgvRecord.DataSource = teacherService.GetAll(); // Gọi hàm lấy danh sách Teacher
-
                     //hide ID
                     if (dgvRecord.Columns["ID"] != null) dgvRecord.Columns["ID"].Visible = false;
                 }
                 else if (currentRole == "Student")
                 {
-                    
                     dgvRecord.DataSource = studentService.GetAll();
+                    if (dgvRecord.Columns["ID"] != null) dgvRecord.Columns["ID"].Visible = false;
                 }
                 else if (currentRole == "Admin")
                 {
-                    // AdminService service = new AdminService();
-                    // dtgData.DataSource = service.GetAll();
+                    dgvRecord.DataSource = adminService.GetAll(); 
+                    //hide ID
+                    if (dgvRecord.Columns["ID"] != null) dgvRecord.Columns["ID"].Visible = false;
                 }
             }
             catch (Exception ex)
@@ -66,14 +63,49 @@ namespace courseworkGUI
                 MessageBox.Show("Error load data: " + ex.Message);
             }
         }
+        
+        private bool CheckInput()
+        {
+            // 1. Xóa hết lỗi cũ
+            errorProvider1.Clear();
+            bool isValid = true;
+            if (!CheckValidate.CheckName(txtName.Text))
+            {
+                errorProvider1.SetError(txtName, "Name must be valid! Capitalize the first letter, EX: David Luis or Nguyen Van A)");
+                isValid = false;
+            }
+            if (!CheckValidate.CheckPhoneNumber(txtPhone.Text))
+            {
+                errorProvider1.SetError(txtPhone, "Phone number must start with 0 and must have 10 numbers!");
+                isValid = false;
+            }
+            if (!CheckValidate.CheckEmail(txtEmail.Text))
+            {
+                errorProvider1.SetError(txtEmail, "Invalid (Ex: abc@gmail.com)");
+                isValid = false;
+            }
+            if (!string.IsNullOrEmpty(txtSalary.Text))
+            {
+                if (!CheckValidate.CheckSalary(txtSalary.Text))
+                {
+                    errorProvider1.SetError(txtSalary, "Please, input number");
+                    isValid = false;
+                }
+            }
+            return isValid;
+        }
 
         private void cbbRecord_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbbRecord.SelectedItem == null) return;
             string choice = cbbRecord.SelectedItem.ToString();
-            if(choice == "Teacher")
+
+            if (choice == "All")
             {
-               
+                dgvRecord.DataSource = personService.GetAll();
+            }
+            else if(choice == "Teacher")
+            {
                 dgvRecord.DataSource = teacherService.GetAll();
             }else if(choice == "Student")
             {
@@ -92,7 +124,7 @@ namespace courseworkGUI
             string keyword = txtSearch.Text.Trim();
             if (!string.IsNullOrEmpty(keyword))
             {
-                dgvRecord.DataSource = Search.SearchUsers(keyword);
+                dgvRecord.DataSource = personService.SearchUsers(keyword);
             }
             else
             {
@@ -101,8 +133,12 @@ namespace courseworkGUI
      
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)        
         {
+            if (CheckInput() == false)
+            {
+                MessageBox.Show("Please, check red error, data not fix"); 
+            }
             if(cbbRole.SelectedItem == null)
             {
                 MessageBox.Show("Please, choose role (Teacher/Student/Admin)!");
@@ -213,7 +249,6 @@ namespace courseworkGUI
                 MessageBox.Show("Error: "+  ex.Message);
             }
         }
-
         private void btnClear_Click(object sender, EventArgs e)
         {
             
@@ -222,6 +257,157 @@ namespace courseworkGUI
             txtEmail.Text = "";
             txtSubject.Text = "";
             txtSalary.Text = "";
+        }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+            cbbRecord.SelectedIndex = 0;
+            cbbRole.SelectedIndex = 0;
+        }
+        int selectedId = -1;// to update
+        private void dgvRecord_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return; // next if click row
+
+            // get current row
+            DataGridViewRow row = dgvRecord.Rows[e.RowIndex];
+            // get id
+            selectedId = Convert.ToInt32(row.Cells["id"].Value);
+
+            txtName.Text = row.Cells["Name"].Value.ToString();
+            txtPhone.Text = row.Cells["PhoneNumber"].Value.ToString();
+            txtEmail.Text = row.Cells["Email"].Value.ToString();
+
+            
+            string role = cbbRole.Text; 
+
+            if (role == "Teacher")
+            {
+                txtSalary.Text = row.Cells["salary"].Value.ToString();
+                txtSubject.Text = row.Cells["subjects"].Value.ToString();
+                txtWorkingHours.Enabled = false;
+            }
+            else if (role == "Student")
+            {
+                txtSubject.Text = row.Cells["subjects"].Value.ToString();
+                txtSalary.Text = "";
+                txtSalary.Enabled = false;
+            }
+            else if (role == "Admin")
+            {
+                txtSalary.Text = row.Cells["salary"].Value.ToString();
+                txtWorkingHours.Text = row.Cells["working_hours"].Value.ToString();
+                bool isFull = Convert.ToBoolean(row.Cells["is_full_time"].Value);
+                rbYes.Checked = isFull;
+                rbNo.Checked = !isFull;
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            // check if any lines selected 
+            if (selectedId == -1)
+            {
+                MessageBox.Show("Please, click on table choose users to update!");
+                return;
+            }
+            if (CheckInput() == false) return;
+
+            try
+            {
+                string role = cbbRole.SelectedItem.ToString();
+
+                string name = txtName.Text.Trim();
+                string phone = txtPhone.Text.Trim();
+                string email = txtEmail.Text.Trim();
+
+                switch (role)
+                {
+                    case "Teacher":
+                        double salT = double.Parse(txtSalary.Text);
+                        string subT = txtSubject.Text;
+                        Teacher teacher = new Teacher(selectedId, name, phone, email, salT, subT);
+                        teacherService.Update(teacher);
+                        break;
+                    case "Student":
+                        string subS = txtSubject.Text;
+                        Student student = new Student(selectedId, name, phone, email, subS);
+                        studentService.Update(student);
+                        break;
+                    case "Admin":
+                        double salA = double.Parse(txtSalary.Text);
+                        int wh = int.Parse(txtWorkingHours.Text);
+                        bool isFull = rbYes.Checked;
+                        Admin admin = new Admin(selectedId, name, phone, email, salA, isFull, wh);
+                        adminService.Update(admin);
+                        break;
+                }
+                MessageBox.Show("Update Successfully!");
+                LoadData();
+                // delete input và reset ID
+                selectedId = -1;
+                txtName.Text = "";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+        }
+
+        private void cbbRole_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadData();
+            if (cbbRole.SelectedItem == null) return;
+            string role = cbbRole.SelectedItem.ToString();
+
+            // hide label and input salary
+            txtSalary.Visible = false;
+            lblSalary.Visible = false;
+            // hide label and input subject
+            txtSubject.Visible = false;
+            lblSubject.Visible = false;
+
+            //hide label and input workinghourse
+            txtWorkingHours.Visible = false;
+            lblWorkingHours.Visible = false;
+
+            // // hide groupbox fulltime
+            grpFullTime.Visible = false;
+
+            switch (role)
+            {
+                case "Teacher":
+                    //display salary
+                    txtSalary.Visible = true;
+                    lblSalary.Visible = true;
+                    //subject
+                    txtSubject.Visible = true;
+                    lblSubject.Visible = true;
+                    break;
+                case "Student":
+                    //display subject
+                    txtSubject.Visible = true;
+                    lblSubject.Visible = true;
+                    break;
+
+                case "Admin":
+                   // display Salary
+                    txtSalary.Visible = true;
+                    lblSalary.Visible = true;
+                    // working hours
+                    txtWorkingHours.Visible = true;
+                    lblWorkingHours.Visible = true;
+                    // is full time
+                    grpFullTime.Visible = true;
+                    break;
+
+                case "All":
+                    txtSalary.Visible = true; lblSalary.Visible = true;
+                    txtSubject.Visible = true; lblSubject.Visible = true;
+                    txtWorkingHours.Visible = true; lblWorkingHours.Visible = true;
+                    grpFullTime.Visible = true;
+                    break;
+            }
         }
     }
 }
