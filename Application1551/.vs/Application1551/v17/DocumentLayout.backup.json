@@ -1,0 +1,51 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\MSI\\source\\repos\\Application1551\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C633C767-456E-4D65-AC80-0EE13DEB55EF}|Application1551.csproj|c:\\users\\msi\\source\\repos\\application1551\\exercise1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C633C767-456E-4D65-AC80-0EE13DEB55EF}|Application1551.csproj|solutionrelative:exercise1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|Application1551||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "exercise1.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\source\\repos\\Application1551\\exercise1.cs",
+              "RelativeDocumentMoniker": "exercise1.cs",
+              "ToolTip": "C:\\Users\\MSI\\source\\repos\\Application1551\\exercise1.cs",
+              "RelativeToolTip": "exercise1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBkAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T03:28:35.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Application1551",
+              "DocumentMoniker": "C:\\Users\\MSI\\source\\repos\\Application1551\\Application1551.csproj",
+              "RelativeDocumentMoniker": "Application1551.csproj",
+              "ToolTip": "C:\\Users\\MSI\\source\\repos\\Application1551\\Application1551.csproj",
+              "RelativeToolTip": "Application1551.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-09-25T03:18:52.527Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

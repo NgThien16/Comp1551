@@ -1,0 +1,11 @@
+C:\Users\MSI\source\repos\Lecture7_GUI_TEXT\bin\Debug\Lecture7_GUI_TEXT.exe.config
+C:\Users\MSI\source\repos\Lecture7_GUI_TEXT\bin\Debug\Lecture7_GUI_TEXT.exe
+C:\Users\MSI\source\repos\Lecture7_GUI_TEXT\bin\Debug\Lecture7_GUI_TEXT.pdb
+C:\Users\MSI\source\repos\Lecture7_GUI_TEXT\obj\Debug\Lecture7_GUI_TEXT.csproj.AssemblyReference.cache
+C:\Users\MSI\source\repos\Lecture7_GUI_TEXT\obj\Debug\Lecture7_GUI_TEXT.Form1.resources
+C:\Users\MSI\source\repos\Lecture7_GUI_TEXT\obj\Debug\Lecture7_GUI_TEXT.Properties.Resources.resources
+C:\Users\MSI\source\repos\Lecture7_GUI_TEXT\obj\Debug\Lecture7_GUI_TEXT.csproj.GenerateResource.cache
+C:\Users\MSI\source\repos\Lecture7_GUI_TEXT\obj\Debug\Lecture7_GUI_TEXT.csproj.CoreCompileInputs.cache
+C:\Users\MSI\source\repos\Lecture7_GUI_TEXT\obj\Debug\Lecture7_GUI_TEXT.exe
+C:\Users\MSI\source\repos\Lecture7_GUI_TEXT\obj\Debug\Lecture7_GUI_TEXT.pdb
+C:\Users\MSI\source\repos\Lecture7_GUI_TEXT\obj\Debug\Lecture7_GUI_TEXT.exe.config

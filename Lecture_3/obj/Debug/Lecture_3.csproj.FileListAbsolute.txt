@@ -1,0 +1,8 @@
+C:\Users\MSI\source\repos\Lecture_3\bin\Debug\Lecture_3.exe.config
+C:\Users\MSI\source\repos\Lecture_3\bin\Debug\Lecture_3.exe
+C:\Users\MSI\source\repos\Lecture_3\bin\Debug\Lecture_3.pdb
+C:\Users\MSI\source\repos\Lecture_3\obj\Debug\Lecture_3.csproj.AssemblyReference.cache
+C:\Users\MSI\source\repos\Lecture_3\obj\Debug\Lecture_3.csproj.CoreCompileInputs.cache
+C:\Users\MSI\source\repos\Lecture_3\obj\Debug\Lecture_3.exe
+C:\Users\MSI\source\repos\Lecture_3\obj\Debug\Lecture_3.pdb
+C:\Users\MSI\source\repos\Lecture_3\obj\Debug\Lecture_3.exe.config

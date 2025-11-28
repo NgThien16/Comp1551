@@ -1,0 +1,11 @@
+C:\Users\MSI\source\repos\lecture7_gui\bin\Debug\lecture7_gui.exe.config
+C:\Users\MSI\source\repos\lecture7_gui\bin\Debug\lecture7_gui.exe
+C:\Users\MSI\source\repos\lecture7_gui\bin\Debug\lecture7_gui.pdb
+C:\Users\MSI\source\repos\lecture7_gui\obj\Debug\lecture7_gui.csproj.AssemblyReference.cache
+C:\Users\MSI\source\repos\lecture7_gui\obj\Debug\lecture7_gui.Form1.resources
+C:\Users\MSI\source\repos\lecture7_gui\obj\Debug\lecture7_gui.Properties.Resources.resources
+C:\Users\MSI\source\repos\lecture7_gui\obj\Debug\lecture7_gui.csproj.GenerateResource.cache
+C:\Users\MSI\source\repos\lecture7_gui\obj\Debug\lecture7_gui.csproj.CoreCompileInputs.cache
+C:\Users\MSI\source\repos\lecture7_gui\obj\Debug\lecture7_gui.exe
+C:\Users\MSI\source\repos\lecture7_gui\obj\Debug\lecture7_gui.pdb
+C:\Users\MSI\source\repos\lecture7_gui\obj\Debug\lecture7_gui.exe.config

@@ -1,0 +1,8 @@
+C:\Users\MSI\source\repos\MenuTutorial2\bin\Debug\MenuTutorial2.exe.config
+C:\Users\MSI\source\repos\MenuTutorial2\bin\Debug\MenuTutorial2.exe
+C:\Users\MSI\source\repos\MenuTutorial2\bin\Debug\MenuTutorial2.pdb
+C:\Users\MSI\source\repos\MenuTutorial2\obj\Debug\MenuTutorial2.csproj.AssemblyReference.cache
+C:\Users\MSI\source\repos\MenuTutorial2\obj\Debug\MenuTutorial2.csproj.CoreCompileInputs.cache
+C:\Users\MSI\source\repos\MenuTutorial2\obj\Debug\MenuTutorial2.exe
+C:\Users\MSI\source\repos\MenuTutorial2\obj\Debug\MenuTutorial2.pdb
+C:\Users\MSI\source\repos\MenuTutorial2\obj\Debug\MenuTutorial2.exe.config
