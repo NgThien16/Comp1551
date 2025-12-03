@@ -25,9 +25,6 @@ namespace courseworkGUI
         {
             InitializeComponent();
         }
-        TeacherService teacherService = new TeacherService();
-        StudentService studentService = new StudentService();
-        AdminService adminService = new AdminService();
         PersonService personService = new PersonService();
         private void LoadData()
         {
@@ -66,7 +63,6 @@ namespace courseworkGUI
         
         private bool CheckInput()
         {
-            // 1. Xóa hết lỗi cũ
             errorProvider1.Clear();
             bool isValid = true;
             if (!CheckValidate.CheckName(txtName.Text))
