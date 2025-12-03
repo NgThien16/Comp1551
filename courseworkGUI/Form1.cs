@@ -198,7 +198,12 @@ namespace courseworkGUI
             {
                 MessageBox.Show("Error:"+ex.Message);
             }
-
+            txtName.Text = "";
+            txtPhone.Text = "";
+            txtEmail.Text = "";
+            txtSubject.Text = "";
+            txtSalary.Text = "";
+            txtWorkingHours.Text = "";
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -257,6 +262,7 @@ namespace courseworkGUI
             txtEmail.Text = "";
             txtSubject.Text = "";
             txtSalary.Text = "";
+            txtWorkingHours.Text = ""; 
         }
 
         private void Home_Load(object sender, EventArgs e)
@@ -272,34 +278,44 @@ namespace courseworkGUI
             // get current row
             DataGridViewRow row = dgvRecord.Rows[e.RowIndex];
             // get id
-            selectedId = Convert.ToInt32(row.Cells["id"].Value);
+            var currentPerson = row.DataBoundItem as Person;
 
-            txtName.Text = row.Cells["Name"].Value.ToString();
-            txtPhone.Text = row.Cells["PhoneNumber"].Value.ToString();
-            txtEmail.Text = row.Cells["Email"].Value.ToString();
+            if (currentPerson != null)
+            {
+                selectedId = currentPerson.ID;
+                txtName.Text = currentPerson.Name;
+                txtPhone.Text = currentPerson.PhoneNumber;
+                txtEmail.Text = currentPerson.Email;
 
+                if (currentPerson is Teacher) cbbRole.SelectedItem = "Teacher";
+                else if (currentPerson is Student) cbbRole.SelectedItem = "Student";
+                else if (currentPerson is Admin) cbbRole.SelectedItem = "Admin";
             
-            string role = cbbRole.Text; 
+                if (currentPerson is Teacher)
+                {
+                    Teacher t = (Teacher)currentPerson;
+                    txtSalary.Text = t.Salary.ToString(); 
+                    txtSubject.Text = t.Subject;
 
-            if (role == "Teacher")
+                    grpFullTime.Visible = false;
+                }
+                else if (currentPerson is Student)
             {
-                txtSalary.Text = row.Cells["salary"].Value.ToString();
-                txtSubject.Text = row.Cells["subjects"].Value.ToString();
-                txtWorkingHours.Enabled = false;
+                    Student s = (Student)currentPerson;
+                    txtSubject.Text = s.Subject;
             }
-            else if (role == "Student")
+                else if (currentPerson is Admin)
             {
-                txtSubject.Text = row.Cells["subjects"].Value.ToString();
-                txtSalary.Text = "";
-                txtSalary.Enabled = false;
+                    Admin a = (Admin)currentPerson;
+                    txtSalary.Text = a.Salary.ToString();
+                    txtWorkingHours.Text = a.WorkingHours.ToString();
+
+                    // Radio Button
+                    if (a.IsFulltime) rbYes.Checked = true;
+                    else rbNo.Checked = true;
+
+                    grpFullTime.Visible = true;
             }
-            else if (role == "Admin")
-            {
-                txtSalary.Text = row.Cells["salary"].Value.ToString();
-                txtWorkingHours.Text = row.Cells["working_hours"].Value.ToString();
-                bool isFull = Convert.ToBoolean(row.Cells["is_full_time"].Value);
-                rbYes.Checked = isFull;
-                rbNo.Checked = !isFull;
             }
         }
 
@@ -347,6 +363,11 @@ namespace courseworkGUI
                 // delete input và reset ID
                 selectedId = -1;
                 txtName.Text = "";
+                txtPhone.Text = "";
+                txtEmail.Text = "";
+                txtSubject.Text = "";
+                txtSalary.Text = "";
+                txtWorkingHours.Text = "";
             }
             catch (Exception ex)
             {
