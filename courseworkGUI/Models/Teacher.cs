@@ -1,48 +1,42 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace courseworkGUI
 {
     class Teacher : Person
     {
-        //attribute
+        // Attribute
         private double _salary;
-        private string _subject;
+        private int _subjectId;
 
-        //properties
+        // Properties
         public double Salary
         {
             get { return _salary; }
-            private set
-            {
-
-                _salary = value;
-            }
+            private set { _salary = value; }
         }
-        public string Subject
+
+        public int SubjectID
         {
-            get { return _subject; }
-            private set
-            {
-
-                _subject = value;
-            }
+            get { return _subjectId; }
+            private set { _subjectId = value; }
         }
-        
-        public Teacher(int ID, string Name, string PhoneNumber, string Email, double salary, string subject) : base(ID, Name, PhoneNumber, Email)
+
+
+        public string SubjectDisplay { get; set; }
+
+        public Teacher(string ID, string Name, string PhoneNumber, string Email, double salary, int subjectId, string subjectDisplay = "")
+            : base(ID, Name, PhoneNumber, Email, "Teacher")
         {
             Salary = salary;
-            Subject = subject;
+            SubjectID = subjectId;
+            SubjectDisplay = subjectDisplay; 
         }
-
 
         public override string ToString()
         {
-            return $"Name:{Name}, Phone Number:{PhoneNumber}, Email:{Email}, Salary: {Salary}$, Subject:{Subject}";
-
+            // 
+            return $"Name:{Name}, Salary: {Salary}$, Subjects: {SubjectDisplay}";
         }
     }
 }

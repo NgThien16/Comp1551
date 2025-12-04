@@ -1,4 +1,6 @@
-﻿using courseworkGUI.Service;
+﻿using courseworkGUI.Models;
+using courseworkGUI.Repository;
+using courseworkGUI.Service;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -24,8 +26,22 @@ namespace courseworkGUI
         public Home()
         {
             InitializeComponent();
+                        
+            var teacherRepo = new TeacherRepository();
+            teacherService = new TeacherService(teacherRepo);
+
+            var studentRepo = new StudentRepository();
+            studentService = new StudentService(studentRepo);
+            
+            var adminRepo = new AdminRepository();
+            adminService = new AdminService(adminRepo);
+            
         }
+        SubjectRepository subjectRepo = new SubjectRepository();
         PersonService personService = new PersonService();
+        private readonly IService<Teacher> teacherService;
+        private readonly IService<Student> studentService;
+        private readonly IService<Admin> adminService;
         private void LoadData()
         {
             try
@@ -36,7 +52,8 @@ namespace courseworkGUI
                 string currentRole = cbbRecord.SelectedItem.ToString();
                 //Reset old data
                 dgvRecord.DataSource = null;
-                dgvRecord.Rows.Clear(); // it run when datasourse = null
+                dgvRecord.Columns.Clear();
+                dgvRecord.AutoGenerateColumns = true;
                 if (currentRole == "Teacher")
                 {  
                     dgvRecord.DataSource = teacherService.GetAll(); // Gọi hàm lấy danh sách Teacher
@@ -60,10 +77,25 @@ namespace courseworkGUI
                 MessageBox.Show("Error load data: " + ex.Message);
             }
         }
+        private void Home_Load(object sender, EventArgs e)
+        {
+            cbbRecord.SelectedIndex = 0;
+            cbbRole.SelectedIndex = 0;
+            LoadData();
+            LoadSubjects();
+        }
         private bool CheckInput()
         {
             errorProvider1.Clear();
             bool isValid = true;
+            string id = txtID.Text.Trim().ToUpper();
+            string role = cbbRole.SelectedItem.ToString();
+            if (!CheckValidate.CheckIdFormat(id, role))
+            {
+                string prefix = role == "Teacher" ? "TEA" : (role == "Student" ? "STU" : "ADM");
+                errorProvider1.SetError(txtID, $"Invalid ID ! with {role}, ID start with '{prefix}' and three numbers (VD: {prefix}001).");
+                isValid = false;
+            }
             if (!CheckValidate.CheckName(txtName.Text))
             {
                 errorProvider1.SetError(txtName, "Name must be valid! Capitalize the first letter, EX: David Luis or Nguyen Van A)");
@@ -128,12 +160,14 @@ namespace courseworkGUI
      
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)        
+        private void btnAdd_Click(object sender, EventArgs e)  
         {
             if (CheckInput() == false)
             {
-                MessageBox.Show("Please, check red error, data not fix"); 
+                MessageBox.Show("Please, check red error, data not fix");
+                return; 
             }
+            
             if(cbbRole.SelectedItem == null)
             {
                 MessageBox.Show("Please, choose role (Teacher/Student/Admin)!");
@@ -143,6 +177,7 @@ namespace courseworkGUI
             ;
             try
             {
+                string id = txtID.Text.Trim();
                 string name = txtName.Text.Trim();
                 string phone = txtPhone.Text.Trim();
                 string email = txtEmail.Text.Trim();
@@ -150,19 +185,26 @@ namespace courseworkGUI
                 {
                     case "Teacher":
                         double salaryT = 0;
-                        double.TryParse(txtSalary.Text, out salaryT); 
-                        string subjectT = txtSubject.Text.Trim();     
+                        double.TryParse(txtSalary.Text, out salaryT);
+                        if (cbbSubject.SelectedValue == null)
+                        {
+                            MessageBox.Show("Please select a subject!");
+                            return;
+                        }
+                        int teacherSubId = Convert.ToInt32(cbbSubject.SelectedValue);
 
-                        Teacher newTeacher = new Teacher(0, name, phone, email, salaryT, subjectT);
-
-                        
+                        Teacher newTeacher = new Teacher(id, name, phone, email, salaryT, teacherSubId);
                         teacherService.Add(newTeacher);
                         break;
 
                     case "Student":
-                        
-                        string subjectS = txtSubject.Text.Trim();
-                        Student newStudent = new Student(0, name, phone, email, subjectS);
+                        if (cbbSubject.SelectedValue == null)
+                        {
+                            MessageBox.Show("Please select a subject!");
+                            return;
+                        }
+                        int studentSubId = Convert.ToInt32(cbbSubject.SelectedValue);
+                        Student newStudent = new Student(id, name, phone, email, studentSubId);
                         studentService.Add(newStudent);
                         break;
 
@@ -178,7 +220,7 @@ namespace courseworkGUI
                         }
                         int workingHours = 0;
                         int.TryParse(txtWorkingHours.Text, out workingHours);
-                        Admin newAdmin = new Admin(0, name, phone, email, salaryA, isFullTime, workingHours);
+                        Admin newAdmin = new Admin(id, name, phone, email, salaryA, isFullTime, workingHours);
 
                         
                         adminService.Add(newAdmin);
@@ -193,12 +235,7 @@ namespace courseworkGUI
             {
                 MessageBox.Show("Error:"+ex.Message);
             }
-            txtName.Text = "";
-            txtPhone.Text = "";
-            txtEmail.Text = "";
-            txtSubject.Text = "";
-            txtSalary.Text = "";
-            txtWorkingHours.Text = "";
+            
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -211,16 +248,16 @@ namespace courseworkGUI
                 MessageBox.Show("Please select a role to delete");
                 return;
                  }
-                string deleteName = txtName.Text.Trim();
+                string deleteID = txtID.Text.Trim().ToUpper();
             //check name
-                if (string.IsNullOrEmpty(deleteName))
+                if (string.IsNullOrEmpty(deleteID))
                 {
-                MessageBox.Show("Please enter name to delete");
+                MessageBox.Show($"Please enter {cbbRole.Text} id to delete");
                 return;
                 }
           
                 // confirm box
-                DialogResult dialog = MessageBox.Show($"Do you want to delete{cbbRole.Text}: '{deleteName}'?",
+                DialogResult dialog = MessageBox.Show($"Do you want to delete{cbbRole.Text}: '{deleteID}'?",
                                                        "Confirm",
                                                        MessageBoxButtons.YesNo,
                                                        MessageBoxIcon.Warning);
@@ -230,13 +267,13 @@ namespace courseworkGUI
                     switch (currentRole) 
                     {
                         case "Teacher":
-                            teacherService.Delete(deleteName);
+                            teacherService.Delete(deleteID);
                             break;
                         case "Student":
-                            studentService.Delete(deleteName);
+                            studentService.Delete(deleteID);
                             break;
                         case "Admin":
-                            adminService.Delete(deleteName);
+                            adminService.Delete(deleteID);
                             break;
                     }
                     MessageBox.Show("Delete Successfully");
@@ -251,21 +288,19 @@ namespace courseworkGUI
         }
         private void btnClear_Click(object sender, EventArgs e)
         {
-            
+            txtID.Text = "";
             txtName.Text = "";
             txtPhone.Text = "";
             txtEmail.Text = "";
-            txtSubject.Text = "";
+            cbbSubject.SelectedIndex = -1;
             txtSalary.Text = "";
-            txtWorkingHours.Text = ""; 
+            txtWorkingHours.Text = "";
+            rbYes.Checked = false;
+            rbNo.Checked = true;
         }
 
-        private void Home_Load(object sender, EventArgs e)
-        {
-            cbbRecord.SelectedIndex = 0;
-            cbbRole.SelectedIndex = 0;
-        }
-        int selectedId = -1;// to update
+       
+        string  selectedId = null;// to update
         private void dgvRecord_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0) return; // next if click row
@@ -277,7 +312,8 @@ namespace courseworkGUI
 
             if (currentPerson != null)
             {
-                selectedId = currentPerson.ID;
+                selectedId = currentPerson.ID; selectedId = currentPerson.ID;
+                txtID.Text =currentPerson.ID;
                 txtName.Text = currentPerson.Name;
                 txtPhone.Text = currentPerson.PhoneNumber;
                 txtEmail.Text = currentPerson.Email;
@@ -285,22 +321,22 @@ namespace courseworkGUI
                 if (currentPerson is Teacher) cbbRole.SelectedItem = "Teacher";
                 else if (currentPerson is Student) cbbRole.SelectedItem = "Student";
                 else if (currentPerson is Admin) cbbRole.SelectedItem = "Admin";
-            
+
                 if (currentPerson is Teacher)
                 {
                     Teacher t = (Teacher)currentPerson;
                     txtSalary.Text = t.Salary.ToString(); 
-                    txtSubject.Text = t.Subject;
+                    cbbSubject.SelectedValue = t.SubjectID;
 
                     grpFullTime.Visible = false;
                 }
                 else if (currentPerson is Student)
-            {
+                {
                     Student s = (Student)currentPerson;
-                    txtSubject.Text = s.Subject;
-            }
+                    cbbSubject.SelectedValue = s.SubjectID;
+                }
                 else if (currentPerson is Admin)
-            {
+                {
                     Admin a = (Admin)currentPerson;
                     txtSalary.Text = a.Salary.ToString();
                     txtWorkingHours.Text = a.WorkingHours.ToString();
@@ -310,14 +346,14 @@ namespace courseworkGUI
                     else rbNo.Checked = true;
 
                     grpFullTime.Visible = true;
-            }
+                }
             }
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             // check if any lines selected 
-            if (selectedId == -1)
+            if (selectedId == null)
             {
                 MessageBox.Show("Please, click on table choose users to update!");
                 return;
@@ -327,7 +363,7 @@ namespace courseworkGUI
             try
             {
                 string role = cbbRole.SelectedItem.ToString();
-
+                string id = txtID.Text.ToUpper().Trim();
                 string name = txtName.Text.Trim();
                 string phone = txtPhone.Text.Trim();
                 string email = txtEmail.Text.Trim();
@@ -336,13 +372,23 @@ namespace courseworkGUI
                 {
                     case "Teacher":
                         double salT = double.Parse(txtSalary.Text);
-                        string subT = txtSubject.Text;
-                        Teacher teacher = new Teacher(selectedId, name, phone, email, salT, subT);
+                        if(cbbSubject == null)
+                        {
+                            MessageBox.Show("Please choose subject");
+                            return;
+                        }
+                        int teacherSubId = Convert.ToInt32(cbbSubject.SelectedValue);
+                        Teacher teacher = new Teacher(selectedId, name, phone, email, salT, teacherSubId);
                         teacherService.Update(teacher);
                         break;
                     case "Student":
-                        string subS = txtSubject.Text;
-                        Student student = new Student(selectedId, name, phone, email, subS);
+                        if (cbbSubject.SelectedValue == null)
+                        {
+                            MessageBox.Show("Please select a subject!");
+                            return;
+                        }
+                        int studentSubId = Convert.ToInt32(cbbSubject.SelectedValue);
+                        Student student = new Student(selectedId, name, phone, email, studentSubId);
                         studentService.Update(student);
                         break;
                     case "Admin":
@@ -356,13 +402,15 @@ namespace courseworkGUI
                 MessageBox.Show("Update Successfully!");
                 LoadData();
                 // delete input và reset ID
-                selectedId = -1;
+                selectedId = null;
+                txtID.Text = "";
                 txtName.Text = "";
                 txtPhone.Text = "";
                 txtEmail.Text = "";
-                txtSubject.Text = "";
+                cbbSubject.SelectedValue = -1;
                 txtSalary.Text = "";
                 txtWorkingHours.Text = "";
+        
             }
             catch (Exception ex)
             {
@@ -380,7 +428,7 @@ namespace courseworkGUI
             txtSalary.Visible = false;
             lblSalary.Visible = false;
             // hide label and input subject
-            txtSubject.Visible = false;
+            cbbSubject.Visible = false;
             lblSubject.Visible = false;
 
             //hide label and input workinghourse
@@ -397,12 +445,12 @@ namespace courseworkGUI
                     txtSalary.Visible = true;
                     lblSalary.Visible = true;
                     //subject
-                    txtSubject.Visible = true;
+                    cbbSubject.Visible = true;
                     lblSubject.Visible = true;
                     break;
                 case "Student":
                     //display subject
-                    txtSubject.Visible = true;
+                    cbbSubject.Visible = true;
                     lblSubject.Visible = true;
                     break;
 
@@ -419,11 +467,35 @@ namespace courseworkGUI
 
                 case "All":
                     txtSalary.Visible = true; lblSalary.Visible = true;
-                    txtSubject.Visible = true; lblSubject.Visible = true;
+                    cbbSubject.Visible = true; lblSubject.Visible = true;
                     txtWorkingHours.Visible = true; lblWorkingHours.Visible = true;
                     grpFullTime.Visible = true;
                     break;
             }
+        }
+        private void LoadSubjects()
+        {
+            try
+            {
+                List<Subject> listSubjects = subjectRepo.GetAll();
+
+                cbbSubject.DataSource = null; 
+                cbbSubject.DataSource = listSubjects;
+
+                cbbSubject.DisplayMember = "Name";
+                cbbSubject.ValueMember = "Id";
+
+                cbbSubject.SelectedIndex = -1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error to load subjects: " + ex.Message);
+            }
+        }
+
+        private void txtWorkingHours_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

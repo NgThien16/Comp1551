@@ -9,13 +9,13 @@ namespace courseworkGUI
     abstract class Person
     {
         // attributes 
-        private int _id;
+        private string  _id;
         private string _name;
         private string _phoneNumber;
         private string _email;
-
+        private string _role;
         //properties
-        public int ID
+        public string ID
         {
             get { return _id; }
             private set { _id = value; }
@@ -42,13 +42,19 @@ namespace courseworkGUI
             get { return _email; }
             private set { _email = value; }
         }
+        public string Role
+        {
+            get { return _role; }
+            private set { _role = value; }
+        }
 
-        public Person(int id, string name, string phoneNumber, string email)
+        public Person(String id, string name, string phoneNumber, string email, string role)
         {
             ID = id;
             Name = name;
             PhoneNumber = phoneNumber;
             Email = email;
+            Role = role;
         }
         //override ToString
         public abstract string ToString();

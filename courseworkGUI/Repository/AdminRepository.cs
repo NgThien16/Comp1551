@@ -12,7 +12,7 @@ namespace courseworkGUI.Repository
         public List<Admin> GetAll() 
         {
             List<Admin> listAdmin = new List<Admin>();
-            using (var conn = Database.GetConnection())
+            using (var conn = Database.Instance.GetConnection())
             {
                 conn.Open();
                 string sql = "SELECT *FROM users WHERE role ='Admin'";
@@ -22,7 +22,7 @@ namespace courseworkGUI.Repository
                     {
                         while (rdr.Read())
                         {
-                            int id = Convert.ToInt32(rdr["id"]);
+                            string id = rdr["id"].ToString();
                             string name = rdr["name"].ToString();
                             string phone = rdr["phone"].ToString();
                             string email = rdr["email"] != DBNull.Value ? rdr["email"].ToString() : "";
@@ -39,13 +39,14 @@ namespace courseworkGUI.Repository
         }
         public void Add(Admin admin) 
         {
-            using (var conn = Database.GetConnection())
+            using (var conn = Database.Instance.GetConnection())
             {
                 conn.Open();
-                string sql = "INSERT INTO users(name,phone,email,role,salary,is_full_time,working_hours)" + "VALUES (@n, @p, @e, 'Admin',@sal,@fulltime,@wh)";
+                string sql = "INSERT INTO users(id,name,phone,email,role,salary,is_full_time,working_hours)" + "VALUES (@id,@n, @p, @e, 'Admin',@sal,@fulltime,@wh)";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
 
                 //value 
+                cmd.Parameters.AddWithValue("@id", admin.ID);
                 cmd.Parameters.AddWithValue("@n", admin.Name);
                 cmd.Parameters.AddWithValue("@p", admin.PhoneNumber);
                 cmd.Parameters.AddWithValue("@e", admin.Email);
@@ -60,7 +61,7 @@ namespace courseworkGUI.Repository
 
         public void Update(Admin admin)
         {
-            using (var conn = Database.GetConnection())
+            using (var conn = Database.Instance.GetConnection())
             {
                 conn.Open();
                 string sql = @"UPDATE users 
@@ -69,31 +70,26 @@ namespace courseworkGUI.Repository
 
                 using (var cmd = new MySqlCommand(sql, conn))
                 {
+                    cmd.Parameters.AddWithValue("@id", admin.ID);
                     cmd.Parameters.AddWithValue("@n", admin.Name);
                     cmd.Parameters.AddWithValue("@p", admin.PhoneNumber);
                     cmd.Parameters.AddWithValue("@e", admin.Email);
                     cmd.Parameters.AddWithValue("@sal", admin.Salary);
-
-                    // Tham số riêng
                     cmd.Parameters.AddWithValue("@full", admin.IsFulltime);
                     cmd.Parameters.AddWithValue("@wh", admin.WorkingHours);
-
-                    cmd.Parameters.AddWithValue("@id", admin.ID);
-
                     cmd.ExecuteNonQuery();
                 }
             }
         }
-        public void Delete(string name)
+        public void Delete(string id)
         {
-            using (var conn = Database.GetConnection())
+            using (var conn = Database.Instance.GetConnection())
             {
                 conn.Open();
-                string sql = "DELETE FROM users WHERE name =@n and role ='Admin'";
+                string sql = "DELETE FROM users WHERE id =@id and role ='Admin'";
                 using (var cmd = new MySqlCommand(sql, conn))
                 {
-                    cmd.Parameters.AddWithValue("@n", name);
-
+                    cmd.Parameters.AddWithValue("@id", id);
                     cmd.ExecuteNonQuery();
                 }
             }

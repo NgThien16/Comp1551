@@ -95,10 +95,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Subject.cs" />
     <Compile Include="Repository\AdminRepository.cs" />
     <Compile Include="Repository\IRepository.cs" />
     <Compile Include="Repository\PersonRepository.cs" />
     <Compile Include="Repository\StudentRepository.cs" />
+    <Compile Include="Repository\SubjectRepository.cs" />
     <Compile Include="Repository\TeacherRepository.cs" />
     <Compile Include="Service\AdminService.cs" />
     <Compile Include="Service\IService.cs" />

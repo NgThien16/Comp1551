@@ -36,13 +36,15 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.lblID = new System.Windows.Forms.Label();
+            this.grpFullTime = new System.Windows.Forms.GroupBox();
             this.rbNo = new System.Windows.Forms.RadioButton();
             this.rbYes = new System.Windows.Forms.RadioButton();
             this.txtWorkingHours = new System.Windows.Forms.TextBox();
             this.lblWorkingHours = new System.Windows.Forms.Label();
             this.lblSalary = new System.Windows.Forms.Label();
             this.txtSalary = new System.Windows.Forms.TextBox();
-            this.txtSubject = new System.Windows.Forms.TextBox();
             this.lblSubject = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtPhone = new System.Windows.Forms.TextBox();
@@ -60,15 +62,15 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.grpFullTime = new System.Windows.Forms.GroupBox();
+            this.cbbSubject = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.grpFullTime.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRecord)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            this.grpFullTime.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -155,12 +157,14 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbbSubject);
+            this.groupBox1.Controls.Add(this.txtID);
+            this.groupBox1.Controls.Add(this.lblID);
             this.groupBox1.Controls.Add(this.grpFullTime);
             this.groupBox1.Controls.Add(this.txtWorkingHours);
             this.groupBox1.Controls.Add(this.lblWorkingHours);
             this.groupBox1.Controls.Add(this.lblSalary);
             this.groupBox1.Controls.Add(this.txtSalary);
-            this.groupBox1.Controls.Add(this.txtSubject);
             this.groupBox1.Controls.Add(this.lblSubject);
             this.groupBox1.Controls.Add(this.txtEmail);
             this.groupBox1.Controls.Add(this.txtPhone);
@@ -171,10 +175,37 @@
             this.groupBox1.Controls.Add(this.labelID);
             this.groupBox1.Location = new System.Drawing.Point(12, 100);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(299, 313);
+            this.groupBox1.Size = new System.Drawing.Size(299, 345);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detail";
+            // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(103, 27);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(178, 22);
+            this.txtID.TabIndex = 20;
+            // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Location = new System.Drawing.Point(6, 27);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(23, 16);
+            this.lblID.TabIndex = 19;
+            this.lblID.Text = "ID:";
+            // 
+            // grpFullTime
+            // 
+            this.grpFullTime.Controls.Add(this.rbNo);
+            this.grpFullTime.Controls.Add(this.rbYes);
+            this.grpFullTime.Location = new System.Drawing.Point(0, 241);
+            this.grpFullTime.Name = "grpFullTime";
+            this.grpFullTime.Size = new System.Drawing.Size(281, 47);
+            this.grpFullTime.TabIndex = 18;
+            this.grpFullTime.TabStop = false;
+            this.grpFullTime.Text = "FullTime";
             // 
             // rbNo
             // 
@@ -200,7 +231,7 @@
             // 
             // txtWorkingHours
             // 
-            this.txtWorkingHours.Location = new System.Drawing.Point(103, 256);
+            this.txtWorkingHours.Location = new System.Drawing.Point(103, 294);
             this.txtWorkingHours.Name = "txtWorkingHours";
             this.txtWorkingHours.Size = new System.Drawing.Size(178, 22);
             this.txtWorkingHours.TabIndex = 17;
@@ -208,7 +239,7 @@
             // lblWorkingHours
             // 
             this.lblWorkingHours.AutoSize = true;
-            this.lblWorkingHours.Location = new System.Drawing.Point(6, 256);
+            this.lblWorkingHours.Location = new System.Drawing.Point(6, 300);
             this.lblWorkingHours.Name = "lblWorkingHours";
             this.lblWorkingHours.Size = new System.Drawing.Size(96, 16);
             this.lblWorkingHours.TabIndex = 16;
@@ -217,7 +248,7 @@
             // lblSalary
             // 
             this.lblSalary.AutoSize = true;
-            this.lblSalary.Location = new System.Drawing.Point(6, 180);
+            this.lblSalary.Location = new System.Drawing.Point(9, 212);
             this.lblSalary.Name = "lblSalary";
             this.lblSalary.Size = new System.Drawing.Size(46, 16);
             this.lblSalary.TabIndex = 14;
@@ -225,22 +256,15 @@
             // 
             // txtSalary
             // 
-            this.txtSalary.Location = new System.Drawing.Point(103, 180);
+            this.txtSalary.Location = new System.Drawing.Point(103, 212);
             this.txtSalary.Name = "txtSalary";
             this.txtSalary.Size = new System.Drawing.Size(178, 22);
             this.txtSalary.TabIndex = 13;
             // 
-            // txtSubject
-            // 
-            this.txtSubject.Location = new System.Drawing.Point(103, 140);
-            this.txtSubject.Name = "txtSubject";
-            this.txtSubject.Size = new System.Drawing.Size(178, 22);
-            this.txtSubject.TabIndex = 12;
-            // 
             // lblSubject
             // 
             this.lblSubject.AutoSize = true;
-            this.lblSubject.Location = new System.Drawing.Point(6, 140);
+            this.lblSubject.Location = new System.Drawing.Point(6, 175);
             this.lblSubject.Name = "lblSubject";
             this.lblSubject.Size = new System.Drawing.Size(55, 16);
             this.lblSubject.TabIndex = 11;
@@ -248,21 +272,21 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(103, 106);
+            this.txtEmail.Location = new System.Drawing.Point(103, 138);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(178, 22);
             this.txtEmail.TabIndex = 10;
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(103, 66);
+            this.txtPhone.Location = new System.Drawing.Point(103, 99);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(178, 22);
             this.txtPhone.TabIndex = 9;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(103, 27);
+            this.txtName.Location = new System.Drawing.Point(103, 62);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(178, 22);
             this.txtName.TabIndex = 8;
@@ -270,7 +294,7 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(6, 106);
+            this.lblEmail.Location = new System.Drawing.Point(6, 138);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(41, 16);
             this.lblEmail.TabIndex = 6;
@@ -279,7 +303,7 @@
             // lblPhone
             // 
             this.lblPhone.AutoSize = true;
-            this.lblPhone.Location = new System.Drawing.Point(6, 66);
+            this.lblPhone.Location = new System.Drawing.Point(6, 99);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(49, 16);
             this.lblPhone.TabIndex = 5;
@@ -288,7 +312,7 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(6, 27);
+            this.lblName.Location = new System.Drawing.Point(6, 62);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(47, 16);
             this.lblName.TabIndex = 4;
@@ -333,9 +357,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label1.Location = new System.Drawing.Point(7, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(166, 25);
+            this.label1.Size = new System.Drawing.Size(140, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Manage Personel";
+            this.label1.Text = "Manage Users";
             // 
             // cbbRecord
             // 
@@ -395,16 +419,14 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // grpFullTime
+            // cbbSubject
             // 
-            this.grpFullTime.Controls.Add(this.rbNo);
-            this.grpFullTime.Controls.Add(this.rbYes);
-            this.grpFullTime.Location = new System.Drawing.Point(0, 209);
-            this.grpFullTime.Name = "grpFullTime";
-            this.grpFullTime.Size = new System.Drawing.Size(281, 41);
-            this.grpFullTime.TabIndex = 18;
-            this.grpFullTime.TabStop = false;
-            this.grpFullTime.Text = "FullTime";
+            this.cbbSubject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbSubject.FormattingEnabled = true;
+            this.cbbSubject.Location = new System.Drawing.Point(103, 175);
+            this.cbbSubject.Name = "cbbSubject";
+            this.cbbSubject.Size = new System.Drawing.Size(178, 24);
+            this.cbbSubject.TabIndex = 21;
             // 
             // Home
             // 
@@ -424,10 +446,10 @@
             this.splitContainer1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRecord)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.grpFullTime.ResumeLayout(false);
             this.grpFullTime.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRecord)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -456,7 +478,6 @@
         private System.Windows.Forms.DataGridView dgvRecord;
         private System.Windows.Forms.ComboBox cbbRecord;
         private System.Windows.Forms.TextBox txtSalary;
-        private System.Windows.Forms.TextBox txtSubject;
         private System.Windows.Forms.Label lblSubject;
         private System.Windows.Forms.Label lblSalary;
         private System.Windows.Forms.Label lblWorkingHours;
@@ -465,6 +486,9 @@
         private System.Windows.Forms.RadioButton rbNo;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.GroupBox grpFullTime;
+        private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.ComboBox cbbSubject;
     }
 }
 

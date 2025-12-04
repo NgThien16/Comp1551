@@ -1,19 +1,50 @@
-﻿using System;
+﻿using courseworkGUI.Repository;
+using Mysqlx.Crud;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using courseworkGUI.Repository;
-using Mysqlx.Crud;
 
 
 namespace courseworkGUI.Service
 {
     internal class TeacherService:IService<Teacher>
     {
-        private TeacherRepository _teacherRepository = new TeacherRepository();
+        private readonly IRepository<Teacher> _teacherRepository;
+        public TeacherService(IRepository<Teacher> teacherRepository)
+        {
+            _teacherRepository = teacherRepository;
+        }
+        public TeacherService()
+        {
+            _teacherRepository = new TeacherRepository();
+        }
+        PersonRepository personRepository = new PersonRepository();
         public void Add(Teacher teacher)
-        { 
+        {
+            if (personRepository.CheckIdExists(teacher.ID))
+            {
+                throw new Exception("ID existed");
+            }
+            if (!CheckValidate.CheckName(teacher.Name))
+            {
+                throw new Exception("Invalid Name");
+            }
+            if (!CheckValidate.CheckPhoneNumber(teacher.PhoneNumber))
+            {
+                throw new Exception("Invalid phone number");
+            }
+            if (!CheckValidate.CheckEmail(teacher.Email))
+            {
+                throw new Exception("Invalid email");
+            }
+            if (!CheckValidate.CheckSalary(teacher.Salary.ToString()))
+            {
+                throw new Exception("Invalid Salary");
+            }
+            
+
             _teacherRepository.Add(teacher);
         }
         public List<Teacher> GetAll() {
@@ -21,15 +52,32 @@ namespace courseworkGUI.Service
         }
         public void Update(Teacher teacher)
         {
-             _teacherRepository.Update(teacher);
-        }
-        public void Delete(string name) 
-        {
-            if (string.IsNullOrEmpty(name))
+            if (!CheckValidate.CheckName(teacher.Name))
             {
-                throw new ArgumentNullException("Please, input name to delete");
+                throw new Exception("Invalid Name");
             }
-            _teacherRepository.Delete(name);
+            if (!CheckValidate.CheckPhoneNumber(teacher.PhoneNumber))
+            {
+                throw new Exception("Invalid phone number");
+            }
+            if (!CheckValidate.CheckEmail(teacher.Email))
+            {
+                throw new Exception("Invalid email");
+            }
+            if (!CheckValidate.CheckSalary(teacher.Salary.ToString()))
+            {
+                throw new Exception("Invalid Salary");
+            }
+           
+            _teacherRepository.Update(teacher);
+        }
+        public void Delete(string id) 
+        {
+            if (string.IsNullOrEmpty(id))
+            {
+                throw new ArgumentNullException("Please, input id to delete");
+            }
+            _teacherRepository.Delete(id);
         }
     }
 }

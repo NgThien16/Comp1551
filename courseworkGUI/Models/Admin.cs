@@ -33,7 +33,7 @@ namespace courseworkGUI
             get { return _workingHours; }
             private set { _workingHours = value; }
         }
-        public Admin(int ID, string Name, string PhoneNumber, string Email, double salary, Boolean isFullTime, int workingHours) : base(ID, Name, PhoneNumber, Email)
+        public Admin(string ID, string Name, string PhoneNumber, string Email, double salary, Boolean isFullTime, int workingHours) : base(ID, Name, PhoneNumber, Email, "Admin")
         {
             Salary = salary;
             IsFulltime = isFullTime;

@@ -11,6 +11,6 @@ namespace courseworkGUI.Repository
         List<T> GetAll();
         void Add(T entity);
         void Update(T entity);
-        void Delete(string name);
+        void Delete(string id);
     }
 }

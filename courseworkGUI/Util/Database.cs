@@ -10,17 +10,32 @@ namespace courseworkGUI
 {
     internal class Database
     {
-        public static string connectionString = "server=localhost;user=root;database=education_db;port=3306;password=codegym;";
+        private static Database _instance;
+        private string connectionString = "server=localhost;user=root;database=education_db;port=3306;password=codegym;";
 
-        public static MySqlConnection GetConnection()
+        // constructor private to another object cannot initialization
+        private Database()
         {
 
         }
-        public static MySqlConnection GetOpenConnection()
+        //property
+        public static Database Instance
         {
-            var conn = new MySqlConnection(connectionString);
-            conn.Open();
-            return conn;
+            get
+            {
+                // check if there is any instance
+                if (_instance == null)
+                {
+                    //not (first call), create new
+                    _instance = new Database();
+                }
+                // if have, return 
+                return _instance;
+            }
+        }
+        public MySqlConnection GetConnection()
+        {
+            return new MySqlConnection(connectionString);
         }
     }
 }

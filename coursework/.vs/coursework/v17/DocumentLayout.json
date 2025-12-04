@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\MSI\\source\\repos\\coursework\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{26441B80-7B7D-4CBE-80D7-BDFFE897E901}|coursework.csproj|C:\\Users\\MSI\\source\\repos\\coursework\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{26441B80-7B7D-4CBE-80D7-BDFFE897E901}|coursework.csproj|c:\\users\\msi\\source\\repos\\coursework\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{26441B80-7B7D-4CBE-80D7-BDFFE897E901}|coursework.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{26441B80-7B7D-4CBE-80D7-BDFFE897E901}|coursework.csproj|c:\\users\\msi\\source\\repos\\coursework\\educationcentresystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{26441B80-7B7D-4CBE-80D7-BDFFE897E901}|coursework.csproj|C:\\Users\\MSI\\source\\repos\\coursework\\educationcentresystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{26441B80-7B7D-4CBE-80D7-BDFFE897E901}|coursework.csproj|solutionrelative:educationcentresystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -34,8 +34,7 @@
               "RelativeToolTip": "EducationCentreSystem.cs",
               "ViewState": "AgIAADcBAAAAAAAAAAAcwGUBAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T07:31:28.196Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-26T07:31:28.196Z"
             },
             {
               "$type": "Document",
@@ -57,7 +56,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\MSI\\source\\repos\\coursework\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAHsAAAAAAAAAAAAIwKoAAABFAAAAAAAAAA==",
+              "ViewState": "AgIAAFgAAAAAAAAAAADwv6oAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-16T14:36:57.255Z",
               "EditorCaption": ""

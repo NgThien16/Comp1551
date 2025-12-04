@@ -9,25 +9,27 @@ namespace courseworkGUI
     class Student : Person
     {
         // attributes
-        string _subject;
+        private int _subjectId;
 
         //properties
-        public string Subject
+        public int SubjectID
         {
-            get { return _subject; }
+            get { return _subjectId; }
             private set
             {
-                _subject = value;
+                _subjectId = value;
             }
         }
-        public Student(int ID, string Name, string PhoneNumber, string Email, string subject) : base(ID, Name, PhoneNumber, Email)
+        public string SubjectDisplay { get; set; }
+        public Student(string ID, string Name, string PhoneNumber, string Email, int subjectId, string subjectDisplay="") : base(ID, Name, PhoneNumber, Email, "Student")
         {
 
-            Subject = subject;
+            SubjectID = subjectId;
+            SubjectDisplay = subjectDisplay;
         }
         public override string ToString()
         {
-            return $"Name:{Name}, Phone Number:{PhoneNumber}, Email:{Email}, Subject:{Subject}";
+            return $"Name:{Name}, Phone Number:{PhoneNumber}, Email:{Email}, Subject:{SubjectID}";
 
         }
     }

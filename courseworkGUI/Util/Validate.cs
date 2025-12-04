@@ -9,6 +9,21 @@ namespace courseworkGUI
 {
     internal class CheckValidate
     {
+        public static bool CheckIdFormat(string id, string role)
+        {
+            if (string.IsNullOrEmpty(id)) return false;
+            string expectedPrefix = "";
+            switch (role)
+            {
+                case "Teacher": expectedPrefix = "TEA"; break;
+                case "Student": expectedPrefix = "STU"; break;
+                case "Admin": expectedPrefix = "ADM"; break;
+                default: return false;
+            }
+            string pattern = $@"^{expectedPrefix}\d{{3}}$";
+
+            return Regex.IsMatch(id, pattern);
+        }
         public static bool CheckName(string name)
         {
             string regexName = @"^([A-ZÀ-Ý][a-zà-ỹ]+)\s([A-ZÀ-Ý][a-zà-ỹ]+)(\s[A-ZÀ-Ý][a-zà-ỹ]+)*$";
@@ -27,7 +42,7 @@ namespace courseworkGUI
         }
         public static bool CheckSalary(string salary) 
         {
-            string regexSalary = @"^[1-9]+$";
+            string regexSalary = @"^[0-9]+$";
             return Regex.IsMatch(salary, regexSalary);
         }
     }
