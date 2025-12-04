@@ -60,7 +60,6 @@ namespace courseworkGUI
                 MessageBox.Show("Error load data: " + ex.Message);
             }
         }
-        
         private bool CheckInput()
         {
             errorProvider1.Clear();

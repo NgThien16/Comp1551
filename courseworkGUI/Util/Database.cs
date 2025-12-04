@@ -14,7 +14,6 @@ namespace courseworkGUI
 
         public static MySqlConnection GetConnection()
         {
-            return new MySqlConnection(connectionString);
 
         }
         public static MySqlConnection GetOpenConnection()

@@ -26,7 +26,6 @@ namespace courseworkGUI.Repository
                             string name = rdr["name"].ToString();
                             string phone = rdr["phone"].ToString();
                             string email = rdr["email"] != DBNull.Value ? rdr["email"].ToString() : "";
-                            string subject = rdr["subjects"] != DBNull.Value ? rdr["subjects"].ToString() : "";
 
                             Student student = new Student(id, name, phone, email, subject);
                             listStudent.Add(student);
