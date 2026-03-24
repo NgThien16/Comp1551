@@ -28,7 +28,7 @@ namespace courseworkGUI.Service
         {
             if (personRepository.CheckIdExists(admin.ID))
             {
-                throw new Exception("ID already existed");
+                throw new Exception("ID already exists");
             }
             if (!CheckValidate.CheckName(admin.Name))
             {

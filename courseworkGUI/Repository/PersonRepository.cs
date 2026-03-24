@@ -72,7 +72,7 @@ namespace courseworkGUI.Repository
                 string sql = @"SELECT u.*, s.name AS subject_name 
                        FROM users u
                        LEFT JOIN subjects s ON u.subject_id = s.subject_id
-                       WHERE (u.name LIKE @kw OR u.phone LIKE @kw) 
+                       WHERE (u.name LIKE @kw OR u.phone LIKE @kw OR u.id like @kw) 
                        ORDER BY u.role";
 
                 using (var cmd = new MySqlCommand(sql, conn))

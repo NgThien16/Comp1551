@@ -46,30 +46,32 @@ namespace courseworkGUI
         {
             try
             {
-                // check user choose role
                 if (cbbRecord.SelectedItem == null) return;
 
                 string currentRole = cbbRecord.SelectedItem.ToString();
-                //Reset old data
+
                 dgvRecord.DataSource = null;
                 dgvRecord.Columns.Clear();
                 dgvRecord.AutoGenerateColumns = true;
+
                 if (currentRole == "Teacher")
-                {  
-                    dgvRecord.DataSource = teacherService.GetAll(); // Gọi hàm lấy danh sách Teacher
-                    //hide ID
-                    if (dgvRecord.Columns["ID"] != null) dgvRecord.Columns["ID"].Visible = false;
+                {
+                    dgvRecord.DataSource = teacherService.GetAll();
                 }
                 else if (currentRole == "Student")
                 {
                     dgvRecord.DataSource = studentService.GetAll();
-                    if (dgvRecord.Columns["ID"] != null) dgvRecord.Columns["ID"].Visible = false;
                 }
                 else if (currentRole == "Admin")
                 {
-                    dgvRecord.DataSource = adminService.GetAll(); 
-                    //hide ID
-                    if (dgvRecord.Columns["ID"] != null) dgvRecord.Columns["ID"].Visible = false;
+                    dgvRecord.DataSource = adminService.GetAll();
+                }
+                if (dgvRecord.Columns.Count > 0)
+                {
+                    if (dgvRecord.Columns["ID"] != null) dgvRecord.Columns["ID"].DisplayIndex = 0;
+                    if (dgvRecord.Columns["Name"] != null) dgvRecord.Columns["Name"].DisplayIndex = 1;
+                    if (dgvRecord.Columns["PhoneNumber"] != null) dgvRecord.Columns["PhoneNumber"].DisplayIndex = 2;
+                    if (dgvRecord.Columns["Email"] != null) dgvRecord.Columns["Email"].DisplayIndex = 3;
                 }
             }
             catch (Exception ex)

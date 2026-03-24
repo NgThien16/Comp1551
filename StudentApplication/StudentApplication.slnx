@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="ApiGateway/ApiGateway.csproj" Id="151ebaf0-4935-4b88-8005-c4ad8f515657" />
+  <Project Path="CourseManagement.Api/CourseManagement.csproj" Id="3bd4fbaf-0e9e-48dc-8de1-978fab715685" />
+  <Project Path="StudentApplication/StudentApplication.csproj" />
+</Solution>
