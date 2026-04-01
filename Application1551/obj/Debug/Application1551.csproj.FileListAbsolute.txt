@@ -1,0 +1,8 @@
+C:\Users\MSI\source\repos\Application1551\bin\Debug\Application1551.exe.config
+C:\Users\MSI\source\repos\Application1551\bin\Debug\Application1551.exe
+C:\Users\MSI\source\repos\Application1551\bin\Debug\Application1551.pdb
+C:\Users\MSI\source\repos\Application1551\obj\Debug\Application1551.csproj.AssemblyReference.cache
+C:\Users\MSI\source\repos\Application1551\obj\Debug\Application1551.csproj.CoreCompileInputs.cache
+C:\Users\MSI\source\repos\Application1551\obj\Debug\Application1551.exe
+C:\Users\MSI\source\repos\Application1551\obj\Debug\Application1551.pdb
+C:\Users\MSI\source\repos\Application1551\obj\Debug\Application1551.exe.config

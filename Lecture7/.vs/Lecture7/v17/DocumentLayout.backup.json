@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\MSI\\source\\repos\\Lecture7\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2A1F20F3-0452-401A-962C-81F63DC55128}|Lecture7.csproj|c:\\users\\msi\\source\\repos\\lecture7\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A1F20F3-0452-401A-962C-81F63DC55128}|Lecture7.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A1F20F3-0452-401A-962C-81F63DC55128}|Lecture7.csproj|C:\\Users\\MSI\\source\\repos\\Lecture7\\Lecture7.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{2A1F20F3-0452-401A-962C-81F63DC55128}|Lecture7.csproj|solutionrelative:Lecture7.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Lecture7.csproj",
+              "DocumentMoniker": "C:\\Users\\MSI\\source\\repos\\Lecture7\\Lecture7.csproj",
+              "RelativeDocumentMoniker": "Lecture7.csproj",
+              "ToolTip": "C:\\Users\\MSI\\source\\repos\\Lecture7\\Lecture7.csproj",
+              "RelativeToolTip": "Lecture7.csproj",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-06T03:12:11.537Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\source\\repos\\Lecture7\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\MSI\\source\\repos\\Lecture7\\Program.cs*",
+              "RelativeToolTip": "Program.cs*",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAiwIoAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-06T01:18:41.214Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

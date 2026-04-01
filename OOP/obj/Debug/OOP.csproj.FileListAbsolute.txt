@@ -1,0 +1,8 @@
+C:\Users\MSI\source\repos\OOP\bin\Debug\OOP.exe.config
+C:\Users\MSI\source\repos\OOP\bin\Debug\OOP.exe
+C:\Users\MSI\source\repos\OOP\bin\Debug\OOP.pdb
+C:\Users\MSI\source\repos\OOP\obj\Debug\OOP.csproj.AssemblyReference.cache
+C:\Users\MSI\source\repos\OOP\obj\Debug\OOP.csproj.CoreCompileInputs.cache
+C:\Users\MSI\source\repos\OOP\obj\Debug\OOP.exe
+C:\Users\MSI\source\repos\OOP\obj\Debug\OOP.pdb
+C:\Users\MSI\source\repos\OOP\obj\Debug\OOP.exe.config

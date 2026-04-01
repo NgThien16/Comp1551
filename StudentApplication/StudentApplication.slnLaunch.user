@@ -1,0 +1,19 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "CourseManagement.Api\\CourseManagement.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "StudentApplication\\StudentApplication.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "ApiGateway\\ApiGateway.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

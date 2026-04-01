@@ -1,0 +1,202 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\MSI\\source\\repos\\courseworkGUI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{729AD2DB-F2BD-4A7A-B9E5-F58E5A0A989D}|courseworkGUI.csproj|C:\\Users\\MSI\\source\\repos\\courseworkGUI\\repository\\teacherrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{729AD2DB-F2BD-4A7A-B9E5-F58E5A0A989D}|courseworkGUI.csproj|solutionrelative:repository\\teacherrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729AD2DB-F2BD-4A7A-B9E5-F58E5A0A989D}|courseworkGUI.csproj|C:\\Users\\MSI\\source\\repos\\courseworkGUI\\repository\\personrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{729AD2DB-F2BD-4A7A-B9E5-F58E5A0A989D}|courseworkGUI.csproj|solutionrelative:repository\\personrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729AD2DB-F2BD-4A7A-B9E5-F58E5A0A989D}|courseworkGUI.csproj|C:\\Users\\MSI\\source\\repos\\courseworkGUI\\repository\\adminrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{729AD2DB-F2BD-4A7A-B9E5-F58E5A0A989D}|courseworkGUI.csproj|solutionrelative:repository\\adminrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729AD2DB-F2BD-4A7A-B9E5-F58E5A0A989D}|courseworkGUI.csproj|C:\\Users\\MSI\\source\\repos\\courseworkGUI\\service\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{729AD2DB-F2BD-4A7A-B9E5-F58E5A0A989D}|courseworkGUI.csproj|solutionrelative:service\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729AD2DB-F2BD-4A7A-B9E5-F58E5A0A989D}|courseworkGUI.csproj|c:\\users\\msi\\source\\repos\\courseworkgui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{729AD2DB-F2BD-4A7A-B9E5-F58E5A0A989D}|courseworkGUI.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729AD2DB-F2BD-4A7A-B9E5-F58E5A0A989D}|courseworkGUI.csproj|C:\\Users\\MSI\\source\\repos\\courseworkGUI\\repository\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{729AD2DB-F2BD-4A7A-B9E5-F58E5A0A989D}|courseworkGUI.csproj|solutionrelative:repository\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729AD2DB-F2BD-4A7A-B9E5-F58E5A0A989D}|courseworkGUI.csproj|C:\\Users\\MSI\\source\\repos\\courseworkGUI\\repository\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{729AD2DB-F2BD-4A7A-B9E5-F58E5A0A989D}|courseworkGUI.csproj|solutionrelative:repository\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729AD2DB-F2BD-4A7A-B9E5-F58E5A0A989D}|courseworkGUI.csproj|C:\\Users\\MSI\\source\\repos\\courseworkGUI\\service\\teacherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{729AD2DB-F2BD-4A7A-B9E5-F58E5A0A989D}|courseworkGUI.csproj|solutionrelative:service\\teacherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729AD2DB-F2BD-4A7A-B9E5-F58E5A0A989D}|courseworkGUI.csproj|C:\\Users\\MSI\\source\\repos\\courseworkGUI\\service\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{729AD2DB-F2BD-4A7A-B9E5-F58E5A0A989D}|courseworkGUI.csproj|solutionrelative:service\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729AD2DB-F2BD-4A7A-B9E5-F58E5A0A989D}|courseworkGUI.csproj|C:\\Users\\MSI\\source\\repos\\courseworkGUI\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{729AD2DB-F2BD-4A7A-B9E5-F58E5A0A989D}|courseworkGUI.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729AD2DB-F2BD-4A7A-B9E5-F58E5A0A989D}|courseworkGUI.csproj|C:\\Users\\MSI\\source\\repos\\courseworkGUI\\models\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{729AD2DB-F2BD-4A7A-B9E5-F58E5A0A989D}|courseworkGUI.csproj|solutionrelative:models\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 10,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\source\\repos\\courseworkGUI\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\MSI\\source\\repos\\courseworkGUI\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAADwv08AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T11:41:58.694Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\MSI\\source\\repos\\courseworkGUI\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\MSI\\source\\repos\\courseworkGUI\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T03:31:29.475Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\source\\repos\\courseworkGUI\\Repository\\IRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\IRepository.cs",
+              "ToolTip": "C:\\Users\\MSI\\source\\repos\\courseworkGUI\\Repository\\IRepository.cs",
+              "RelativeToolTip": "Repository\\IRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T16:20:02.975Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AdminService.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\source\\repos\\courseworkGUI\\Service\\AdminService.cs",
+              "RelativeDocumentMoniker": "Service\\AdminService.cs",
+              "ToolTip": "C:\\Users\\MSI\\source\\repos\\courseworkGUI\\Service\\AdminService.cs",
+              "RelativeToolTip": "Service\\AdminService.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwB4AAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T10:24:42.159Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AdminRepository.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\source\\repos\\courseworkGUI\\Repository\\AdminRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\AdminRepository.cs",
+              "ToolTip": "C:\\Users\\MSI\\source\\repos\\courseworkGUI\\Repository\\AdminRepository.cs",
+              "RelativeToolTip": "Repository\\AdminRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEMAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T09:37:50.775Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TeacherService.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\source\\repos\\courseworkGUI\\Service\\TeacherService.cs",
+              "RelativeDocumentMoniker": "Service\\TeacherService.cs",
+              "ToolTip": "C:\\Users\\MSI\\source\\repos\\courseworkGUI\\Service\\TeacherService.cs",
+              "RelativeToolTip": "Service\\TeacherService.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwBsAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T09:29:20.141Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "StudentService.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\source\\repos\\courseworkGUI\\Service\\StudentService.cs",
+              "RelativeDocumentMoniker": "Service\\StudentService.cs",
+              "ToolTip": "C:\\Users\\MSI\\source\\repos\\courseworkGUI\\Service\\StudentService.cs",
+              "RelativeToolTip": "Service\\StudentService.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAA5wB0AAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T09:28:58.448Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PersonRepository.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\source\\repos\\courseworkGUI\\Repository\\PersonRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\PersonRepository.cs",
+              "ToolTip": "C:\\Users\\MSI\\source\\repos\\courseworkGUI\\Repository\\PersonRepository.cs",
+              "RelativeToolTip": "Repository\\PersonRepository.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAUwEoAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T09:26:38.935Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Person.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\source\\repos\\courseworkGUI\\Models\\Person.cs",
+              "RelativeDocumentMoniker": "Models\\Person.cs",
+              "ToolTip": "C:\\Users\\MSI\\source\\repos\\courseworkGUI\\Models\\Person.cs",
+              "RelativeToolTip": "Models\\Person.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T09:26:33.132Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "StudentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\source\\repos\\courseworkGUI\\Repository\\StudentRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\StudentRepository.cs",
+              "ToolTip": "C:\\Users\\MSI\\source\\repos\\courseworkGUI\\Repository\\StudentRepository.cs",
+              "RelativeToolTip": "Repository\\StudentRepository.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAAwB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T10:02:43.053Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TeacherRepository.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\source\\repos\\courseworkGUI\\Repository\\TeacherRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\TeacherRepository.cs",
+              "ToolTip": "C:\\Users\\MSI\\source\\repos\\courseworkGUI\\Repository\\TeacherRepository.cs",
+              "RelativeToolTip": "Repository\\TeacherRepository.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAswEYAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T09:20:52.085Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+C:\Users\MSI\source\repos\ApplicationDevelopment\ApplicationDevelopment\bin\Debug\ApplicationDevelopment.exe.config
+C:\Users\MSI\source\repos\ApplicationDevelopment\ApplicationDevelopment\bin\Debug\ApplicationDevelopment.exe
+C:\Users\MSI\source\repos\ApplicationDevelopment\ApplicationDevelopment\bin\Debug\ApplicationDevelopment.pdb
+C:\Users\MSI\source\repos\ApplicationDevelopment\ApplicationDevelopment\obj\Debug\ApplicationDevelopment.csproj.AssemblyReference.cache
+C:\Users\MSI\source\repos\ApplicationDevelopment\ApplicationDevelopment\obj\Debug\ApplicationDevelopment.Properties.Resources.resources
+C:\Users\MSI\source\repos\ApplicationDevelopment\ApplicationDevelopment\obj\Debug\ApplicationDevelopment.csproj.GenerateResource.cache
+C:\Users\MSI\source\repos\ApplicationDevelopment\ApplicationDevelopment\obj\Debug\ApplicationDevelopment.csproj.CoreCompileInputs.cache
+C:\Users\MSI\source\repos\ApplicationDevelopment\ApplicationDevelopment\obj\Debug\ApplicationDevelopment.exe
+C:\Users\MSI\source\repos\ApplicationDevelopment\ApplicationDevelopment\obj\Debug\ApplicationDevelopment.pdb
