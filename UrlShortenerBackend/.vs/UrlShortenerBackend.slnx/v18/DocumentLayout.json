@@ -1,0 +1,213 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\MSI\\source\\repos\\UrlShortenerBackend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F219522F-499E-8BEA-69B4-73E7C6ACC61B}|UrlShortenerBackend\\UrlShortenerBackend.csproj|c:\\users\\msi\\source\\repos\\urlshortenerbackend\\urlshortenerbackend\\controllers\\urlscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F219522F-499E-8BEA-69B4-73E7C6ACC61B}|UrlShortenerBackend\\UrlShortenerBackend.csproj|solutionrelative:urlshortenerbackend\\controllers\\urlscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F219522F-499E-8BEA-69B4-73E7C6ACC61B}|UrlShortenerBackend\\UrlShortenerBackend.csproj|c:\\users\\msi\\source\\repos\\urlshortenerbackend\\urlshortenerbackend\\repositories\\urlshortenerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F219522F-499E-8BEA-69B4-73E7C6ACC61B}|UrlShortenerBackend\\UrlShortenerBackend.csproj|solutionrelative:urlshortenerbackend\\repositories\\urlshortenerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F219522F-499E-8BEA-69B4-73E7C6ACC61B}|UrlShortenerBackend\\UrlShortenerBackend.csproj|c:\\users\\msi\\source\\repos\\urlshortenerbackend\\urlshortenerbackend\\controllers\\redirectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F219522F-499E-8BEA-69B4-73E7C6ACC61B}|UrlShortenerBackend\\UrlShortenerBackend.csproj|solutionrelative:urlshortenerbackend\\controllers\\redirectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F219522F-499E-8BEA-69B4-73E7C6ACC61B}|UrlShortenerBackend\\UrlShortenerBackend.csproj|c:\\users\\msi\\source\\repos\\urlshortenerbackend\\urlshortenerbackend\\models\\url.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F219522F-499E-8BEA-69B4-73E7C6ACC61B}|UrlShortenerBackend\\UrlShortenerBackend.csproj|solutionrelative:urlshortenerbackend\\models\\url.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F219522F-499E-8BEA-69B4-73E7C6ACC61B}|UrlShortenerBackend\\UrlShortenerBackend.csproj|c:\\users\\msi\\source\\repos\\urlshortenerbackend\\urlshortenerbackend\\repositories\\interfaces\\iurlshortenerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F219522F-499E-8BEA-69B4-73E7C6ACC61B}|UrlShortenerBackend\\UrlShortenerBackend.csproj|solutionrelative:urlshortenerbackend\\repositories\\interfaces\\iurlshortenerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F219522F-499E-8BEA-69B4-73E7C6ACC61B}|UrlShortenerBackend\\UrlShortenerBackend.csproj|c:\\users\\msi\\source\\repos\\urlshortenerbackend\\urlshortenerbackend\\dtos\\urldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F219522F-499E-8BEA-69B4-73E7C6ACC61B}|UrlShortenerBackend\\UrlShortenerBackend.csproj|solutionrelative:urlshortenerbackend\\dtos\\urldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F219522F-499E-8BEA-69B4-73E7C6ACC61B}|UrlShortenerBackend\\UrlShortenerBackend.csproj|c:\\users\\msi\\source\\repos\\urlshortenerbackend\\urlshortenerbackend\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F219522F-499E-8BEA-69B4-73E7C6ACC61B}|UrlShortenerBackend\\UrlShortenerBackend.csproj|solutionrelative:urlshortenerbackend\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F219522F-499E-8BEA-69B4-73E7C6ACC61B}|UrlShortenerBackend\\UrlShortenerBackend.csproj|c:\\users\\msi\\source\\repos\\urlshortenerbackend\\urlshortenerbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F219522F-499E-8BEA-69B4-73E7C6ACC61B}|UrlShortenerBackend\\UrlShortenerBackend.csproj|solutionrelative:urlshortenerbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F219522F-499E-8BEA-69B4-73E7C6ACC61B}|UrlShortenerBackend\\UrlShortenerBackend.csproj|c:\\users\\msi\\source\\repos\\urlshortenerbackend\\urlshortenerbackend\\data\\urldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F219522F-499E-8BEA-69B4-73E7C6ACC61B}|UrlShortenerBackend\\UrlShortenerBackend.csproj|solutionrelative:urlshortenerbackend\\data\\urldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F219522F-499E-8BEA-69B4-73E7C6ACC61B}|UrlShortenerBackend\\UrlShortenerBackend.csproj|c:\\users\\msi\\source\\repos\\urlshortenerbackend\\urlshortenerbackend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F219522F-499E-8BEA-69B4-73E7C6ACC61B}|UrlShortenerBackend\\UrlShortenerBackend.csproj|solutionrelative:urlshortenerbackend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F219522F-499E-8BEA-69B4-73E7C6ACC61B}|UrlShortenerBackend\\UrlShortenerBackend.csproj|c:\\users\\msi\\source\\repos\\urlshortenerbackend\\urlshortenerbackend\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F219522F-499E-8BEA-69B4-73E7C6ACC61B}|UrlShortenerBackend\\UrlShortenerBackend.csproj|solutionrelative:urlshortenerbackend\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F219522F-499E-8BEA-69B4-73E7C6ACC61B}|UrlShortenerBackend\\UrlShortenerBackend.csproj|c:\\users\\msi\\source\\repos\\urlshortenerbackend\\urlshortenerbackend\\migrations\\20260404055402_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F219522F-499E-8BEA-69B4-73E7C6ACC61B}|UrlShortenerBackend\\UrlShortenerBackend.csproj|solutionrelative:urlshortenerbackend\\migrations\\20260404055402_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UrlDto.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\source\\repos\\UrlShortenerBackend\\UrlShortenerBackend\\DTOs\\UrlDto.cs",
+              "RelativeDocumentMoniker": "UrlShortenerBackend\\DTOs\\UrlDto.cs",
+              "ToolTip": "C:\\Users\\MSI\\source\\repos\\UrlShortenerBackend\\UrlShortenerBackend\\DTOs\\UrlDto.cs",
+              "RelativeToolTip": "UrlShortenerBackend\\DTOs\\UrlDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-04T06:18:20.297Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\MSI\\source\\repos\\UrlShortenerBackend\\UrlShortenerBackend\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "UrlShortenerBackend\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\MSI\\source\\repos\\UrlShortenerBackend\\UrlShortenerBackend\\Properties\\launchSettings.json",
+              "RelativeToolTip": "UrlShortenerBackend\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-04T06:12:26.587Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RedirectController.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\source\\repos\\UrlShortenerBackend\\UrlShortenerBackend\\Controllers\\RedirectController.cs",
+              "RelativeDocumentMoniker": "UrlShortenerBackend\\Controllers\\RedirectController.cs",
+              "ToolTip": "C:\\Users\\MSI\\source\\repos\\UrlShortenerBackend\\UrlShortenerBackend\\Controllers\\RedirectController.cs",
+              "RelativeToolTip": "UrlShortenerBackend\\Controllers\\RedirectController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-04T06:02:07.387Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UrlsController.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\source\\repos\\UrlShortenerBackend\\UrlShortenerBackend\\Controllers\\UrlsController.cs",
+              "RelativeDocumentMoniker": "UrlShortenerBackend\\Controllers\\UrlsController.cs",
+              "ToolTip": "C:\\Users\\MSI\\source\\repos\\UrlShortenerBackend\\UrlShortenerBackend\\Controllers\\UrlsController.cs",
+              "RelativeToolTip": "UrlShortenerBackend\\Controllers\\UrlsController.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAuwDIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-04T06:00:11.635Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IUrlShortenerRepository.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\source\\repos\\UrlShortenerBackend\\UrlShortenerBackend\\Repositories\\Interfaces\\IUrlShortenerRepository.cs",
+              "RelativeDocumentMoniker": "UrlShortenerBackend\\Repositories\\Interfaces\\IUrlShortenerRepository.cs",
+              "ToolTip": "C:\\Users\\MSI\\source\\repos\\UrlShortenerBackend\\UrlShortenerBackend\\Repositories\\Interfaces\\IUrlShortenerRepository.cs",
+              "RelativeToolTip": "UrlShortenerBackend\\Repositories\\Interfaces\\IUrlShortenerRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-04T05:56:44.302Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "20260404055402_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\source\\repos\\UrlShortenerBackend\\UrlShortenerBackend\\Migrations\\20260404055402_InitialCreate.cs",
+              "RelativeDocumentMoniker": "UrlShortenerBackend\\Migrations\\20260404055402_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\MSI\\source\\repos\\UrlShortenerBackend\\UrlShortenerBackend\\Migrations\\20260404055402_InitialCreate.cs",
+              "RelativeToolTip": "UrlShortenerBackend\\Migrations\\20260404055402_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-04T05:54:03.236Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\MSI\\source\\repos\\UrlShortenerBackend\\UrlShortenerBackend\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "UrlShortenerBackend\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\MSI\\source\\repos\\UrlShortenerBackend\\UrlShortenerBackend\\appsettings.Development.json",
+              "RelativeToolTip": "UrlShortenerBackend\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-04T05:53:03.607Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\source\\repos\\UrlShortenerBackend\\UrlShortenerBackend\\Program.cs",
+              "RelativeDocumentMoniker": "UrlShortenerBackend\\Program.cs",
+              "ToolTip": "C:\\Users\\MSI\\source\\repos\\UrlShortenerBackend\\UrlShortenerBackend\\Program.cs",
+              "RelativeToolTip": "UrlShortenerBackend\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-04T05:51:56.612Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\MSI\\source\\repos\\UrlShortenerBackend\\UrlShortenerBackend\\appsettings.json",
+              "RelativeDocumentMoniker": "UrlShortenerBackend\\appsettings.json",
+              "ToolTip": "C:\\Users\\MSI\\source\\repos\\UrlShortenerBackend\\UrlShortenerBackend\\appsettings.json",
+              "RelativeToolTip": "UrlShortenerBackend\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-03T10:12:19.853Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UrlShortenerRepository.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\source\\repos\\UrlShortenerBackend\\UrlShortenerBackend\\Repositories\\UrlShortenerRepository.cs",
+              "RelativeDocumentMoniker": "UrlShortenerBackend\\Repositories\\UrlShortenerRepository.cs",
+              "ToolTip": "C:\\Users\\MSI\\source\\repos\\UrlShortenerBackend\\UrlShortenerBackend\\Repositories\\UrlShortenerRepository.cs",
+              "RelativeToolTip": "UrlShortenerBackend\\Repositories\\UrlShortenerRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-03T09:56:23.662Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UrlDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\source\\repos\\UrlShortenerBackend\\UrlShortenerBackend\\Data\\UrlDbContext.cs",
+              "RelativeDocumentMoniker": "UrlShortenerBackend\\Data\\UrlDbContext.cs",
+              "ToolTip": "C:\\Users\\MSI\\source\\repos\\UrlShortenerBackend\\UrlShortenerBackend\\Data\\UrlDbContext.cs",
+              "RelativeToolTip": "UrlShortenerBackend\\Data\\UrlDbContext.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA0wBMAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-03T08:15:40.233Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Url.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\source\\repos\\UrlShortenerBackend\\UrlShortenerBackend\\Models\\Url.cs",
+              "RelativeDocumentMoniker": "UrlShortenerBackend\\Models\\Url.cs",
+              "ToolTip": "C:\\Users\\MSI\\source\\repos\\UrlShortenerBackend\\UrlShortenerBackend\\Models\\Url.cs",
+              "RelativeToolTip": "UrlShortenerBackend\\Models\\Url.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-03T07:57:37.573Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
